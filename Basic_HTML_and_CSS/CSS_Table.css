@@ -1,0 +1,18 @@
+table {
+    border: 1px dotted black;
+}
+td:hover {
+    background-color: silver;
+    color: steelblue;
+}
+tr, th {
+    background-color: darkslategrey;
+    color: sandybrown;
+}
+tr, td {
+    background-color: dodgerblue;
+    color: gold;
+}
+h1 {
+    color: crimson;
+}
