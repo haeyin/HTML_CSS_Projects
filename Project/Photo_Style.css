@@ -1,0 +1,88 @@
+/*===================================
+    GALLERY SECTION ANIMATION
+=====================================*/
+p {
+    font-weight: 300; /*boldness*/
+    line-height: 300; /*space in-between the lines*/
+    padding-bottom: 15px; /*space(or padding) on the bottom*/
+}
+
+.photo {
+    position: relative;
+    line-height: 0; /*usually type out four different values*/
+    margin-bottom: 2em;
+    overflow: hidden; /*prevents things from showing out of the photo's border*/
+    border-radius: 8px;
+    padding: 1px;
+    border: 1px solid #021a40;
+    background-color: #ff0;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.photo-container {
+    text-align: center;
+    margin: 15px auto; /*top(&bottom) right&left (on browser bg)*/
+    width: 300px;
+    height: 200px;
+}
+
+.photo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto; /*took me a while to figure out these (not counting the size difference of the container and img) were the margins that actually controlled how much bg color was showing around the picture*/
+    width: 300px;
+    height: 200px;
+}
+
+.photo-overlay {
+    color:  #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding left: 20px;
+    padding right: 20px;
+    justify-content: center; /*for centering text inside*/
+    align-items: center;
+    background: rgba(0,0,0, .5) /*red green blue alpha(opacity)*/
+}
+
+.white-head {
+    color: #C9BDAA;
+    margin-top: 5%;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+/*================================
+    PHOTO OVERLAY TRANSITIONS
+==================================*/
+
+.photo-overlay {
+    opacity: 0;
+    transition: opacity .1s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.photo-overlay p {   
+    width: 100%;
+    height: 100%;
+    color: #C9BDAA;
+    line-height: 30px; /*NOTE to Instructor: it took me a while to figure out why the paragraph wasn't showing, but this line was missing in the video*/
+}
+
+.photo-overlay:hover {
+    opacity: 1;
+}
+
+.photo img {
+    transition: transform .5s;
+    transform-origin: 50% 50%; /*perspective the user sees on screen*/
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
