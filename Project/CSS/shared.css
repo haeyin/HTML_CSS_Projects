@@ -118,7 +118,7 @@ section { /*doesn't need a period in front of 'section' because it's a semantic*
     content: " ";
     width: 100%;
     position: fixed;
-    z-index: 100%;
+    z-index: 100;
 }
 
 /*==========================
