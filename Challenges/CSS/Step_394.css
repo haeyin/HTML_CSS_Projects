@@ -1,0 +1,12 @@
+p {
+    color: darkviolet;
+    background-color: ghostwhite;
+    font-family: sans-serif;
+}
+
+p:hover {
+    color: beige;
+    background-color: black;
+    font-family: serif;
+}
+
