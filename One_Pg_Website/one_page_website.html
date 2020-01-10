@@ -2,6 +2,7 @@
  <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>One Page Website</title>
 	<link rel="stylesheet" type="text/css" href="./CSS/one_page_website.css">
 </head>
@@ -36,31 +37,69 @@
 
 	<!-- Photos -->
 	<section>
-		<div id="Photos">
-			<h1>Photos</h1>
-			<div>
-				<div class="photo">
-					<p><img src="./Images/t_1.jpg" alt="Baron" height="200"> &nbsp; &nbsp;
-					<img src="./Images/t_2.jpg" alt="Aphelios" height="200"></p>
+		<h1>Splash Art</h1>
+		<div class="row">
+			<div class="column">
+				<img src="./Images/t_3.jpg" height="200px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+			</div>
+			<div class="column">
+				<img src="./Images/t_4.png" height="200px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"> 
+			</div>
+			<div class="column">
+				<img src="./Images/t_6.jpg" height="200px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+			</div>
+		</div>
+
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<div class="lolSplash">
+					<div class="numbertext">1 / 3</div>
+					<img src="./Images/t_3.jpg" style="width:100%">
+				</div>
+				<div class="lolSplash">
+					<div class="numbertext">2 / 3</div>
+					<img src="./Images/t_4.png" style="width:100%">
+				</div>
+				<div class="lolSplash">
+					<div class="numbertext">3 / 3</div>
+					<img src="./Images/t_6.jpg" style="width:100%">
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<div class="column">
+					<img class="demo cursor" src="./Images/t_3.jpg" style="width:100%" onclick="currentSlide(1)" alt="Akali">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="./Images/t_4.png" style="width:100%" onclick="currentSlide(2)" alt="Qiyana">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="./Images/t_6.jpg" style="width:100%" onclick="currentSlide(3)" alt="Senna">
 				</div>
 			</div>
 		</div>
 	</section>
-
-
 	<!-- Videos -->
-		<section>
-			<div id="Videos">
-				<h1>Videos</h1>
-				<div>
-					<h3>Videos from YouTube Channels I enjoy!</h3>
-					<p>TwosetViolin</p>
-					<p><iframe width="560" height="315" src="https://www.youtube.com/embed/RlwTWi-N0ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-					<p>Game Theory</p>
-					<p><iframe width="560" height="315" src="https://www.youtube.com/embed/eZXf3p1S5Tk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-				</div>	
-			</div>
-		</section>
+<!--
+	<section>
+		<div id="Videos">
+			<h1>Videos</h1>
+			<div>
+				<h3>Videos from YouTube Channels I enjoy!</h3>
+				<p>TwosetViolin</p>
+				<p><iframe width="560" height="315" src="https://www.youtube.com/embed/RlwTWi-N0ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+				<p>Game Theory</p>
+				<p><iframe width="560" height="315" src="https://www.youtube.com/embed/eZXf3p1S5Tk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+			</div>	
+		</div>
+	</section> -->
 	
 	<!-- Contact -->
 		<section>
@@ -83,5 +122,6 @@
 			Contact info: Not posting here.</p>
 		</div>
 	</footer>
+	<script src="./JS/one_page_website.js"></script>
 </body>
 </html>
